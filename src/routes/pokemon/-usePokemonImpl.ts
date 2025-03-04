@@ -1,11 +1,10 @@
-import { GetAllPokemonParams } from "@/types";
 import { usePokemonData } from "./-hooks/usePokemonData";
 
-export const usePokemonImpl = ({ params }: { params: GetAllPokemonParams }) => {
-    const { data, isLoading } = usePokemonData({ params });
+export const usePokemonImpl = () => {
+  const { data, isLoading } = usePokemonData();
 
-    return {
-        data,
-        isLoading
-    };
+  return {
+    data,
+    isLoading,
+  };
 };
